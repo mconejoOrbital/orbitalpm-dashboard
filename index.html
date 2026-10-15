@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OrbitalPM | Dashboard de ingeniería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">O</span>
+        <div>
+          <strong>OrbitalPM</strong>
+          <small>Engineering Hub</small>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <a class="nav-item active" href="#overview">
+          <span class="nav-icon">◫</span> Resumen
+        </a>
+        <a class="nav-item" href="#engineers">
+          <span class="nav-icon">◎</span> Ingenieros
+        </a>
+        <a class="nav-item" href="#projects">
+          <span class="nav-icon">◇</span> Proyectos
+        </a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="live-dot"></span>
+        <div>
+          <strong>Azure DevOps</strong>
+          <small>Datos de OrbitalPM</small>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">OPERACIONES DE INGENIERÍA</p>
+          <h1>Vista semanal del equipo</h1>
+          <p id="week-label" class="subtitle">Cargando periodo...</p>
+        </div>
+        <div class="header-actions">
+          <label class="search">
+            <span>⌕</span>
+            <input id="search-input" type="search" placeholder="Buscar ingeniero o proyecto">
+          </label>
+          <label class="auto-refresh-toggle">
+            <input id="auto-refresh-checkbox" type="checkbox" checked>
+            <span>Auto-refresco</span>
+          </label>
+          <button id="reload-button" class="button" type="button">↻ Recargar</button>
+        </div>
+      </header>
+
+      <section id="overview" class="metrics-grid" aria-label="Resumen semanal">
+        <article class="metric-card accent-blue">
+          <div class="metric-icon">◎</div>
+          <div>
+            <span>Ingenieros del roster</span>
+            <strong id="metric-engineers">—</strong>
+            <small id="metric-active-engineers">— con proyectos activos</small>
+          </div>
+        </article>
+        <article class="metric-card accent-violet">
+          <div class="metric-icon">◇</div>
+          <div>
+            <span>Portafolio vigente</span>
+            <strong id="metric-projects">—</strong>
+            <small id="metric-active-tasks">— tareas activas vinculadas</small>
+          </div>
+        </article>
+        <article class="metric-card accent-orange">
+          <div class="metric-icon">✓</div>
+          <div>
+            <span>Tareas semanales</span>
+            <strong id="metric-tasks">—</strong>
+            <small id="metric-completed">— completadas</small>
+          </div>
+        </article>
+        <article class="metric-card accent-green">
+          <div class="metric-icon">↗</div>
+          <div>
+            <span>Avance semanal (sprint)</span>
+            <strong id="metric-progress">—</strong>
+            <small>completadas / total</small>
+          </div>
+        </article>
+        <article class="metric-card accent-teal">
+          <div class="metric-icon">◈</div>
+          <div>
+            <span>Avance global de portafolio</span>
+            <strong id="metric-portfolio-progress">—</strong>
+            <small id="metric-portfolio-progress-detail">— proyectos vigentes</small>
+          </div>
+        </article>
+      </section>
+
+      <section class="toolbar">
+        <div class="filter-group" role="group" aria-label="Filtro de estado">
+          <button class="filter-chip active" data-filter="all" type="button">Todos</button>
+          <button class="filter-chip" data-filter="weekly" type="button">Con sprint esta semana</button>
+          <button class="filter-chip" data-filter="no-weekly" type="button">Sin sprint esta semana</button>
+        </div>
+        <div class="toolbar-status">
+          <p id="updated-label" class="updated-label"></p>
+          <p id="next-refresh-label" class="updated-label"></p>
+        </div>
+      </section>
+
+      <section id="engineers" class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CAPACIDAD Y EJECUCIÓN</p>
+            <h2>Proyectos por ingeniero</h2>
+          </div>
+          <span id="result-count" class="result-count"></span>
+        </div>
+        <div id="engineer-grid" class="engineer-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span>⌕</span>
+          <h3>No encontramos resultados</h3>
+          <p>Prueba con otro nombre, proyecto o filtro.</p>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section project-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DISTRIBUCIÓN DE CARGA</p>
+            <h2>Portafolio vigente de Loop</h2>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Proyecto</th>
+                <th>Estado Loop</th>
+                <th>Progreso Loop</th>
+                <th>Ingenieros</th>
+                <th>Tareas activas</th>
+                <th>Tareas semana</th>
+                <th>Completadas semana</th>
+                <th>Avance semanal</th>
+              </tr>
+            </thead>
+            <tbody id="project-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="all-tasks" class="content-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">DETALLE COMPLETO DE LA SEMANA</p>
+            <h2>Todas las tareas por proyecto y sprint</h2>
+          </div>
+          <span id="task-count-label" class="result-count"></span>
+        </div>
+        <div class="task-toolbar">
+          <label class="task-search">
+            <span>⌕</span>
+            <input id="task-search-input" type="search" placeholder="Buscar tarea, proyecto o ingeniero">
+          </label>
+          <select id="task-project-filter" aria-label="Filtrar por proyecto">
+            <option value="">Todos los proyectos</option>
+          </select>
+          <select id="task-status-filter" aria-label="Filtrar por estado">
+            <option value="">Todos los estados</option>
+            <option value="open">Pendientes</option>
+            <option value="done">Completadas</option>
+          </select>
+        </div>
+        <div id="task-view-summary" class="task-view-summary"></div>
+        <div id="project-task-breakdown" class="project-task-breakdown"></div>
+      </section>
+
+      <section id="completed-projects" class="content-section">
+        <details class="completed-portfolio">
+          <summary>
+            <div>
+              <p class="eyebrow">CIERRE POR PORTAFOLIO</p>
+              <h2>Proyectos completados o cerrados (ocultos)</h2>
+            </div>
+            <span id="completed-project-count" class="result-count"></span>
+          </summary>
+          <p class="completed-help">Se ocultan del portafolio vigente porque están en estado "Closing", tienen 100% de avance en Loop, o ya no aparecen en el portafolio.</p>
+          <div class="completed-group">
+            <h3>Cerrados o al 100% en Loop</h3>
+            <div id="closed-portfolio-list" class="completed-project-list"></div>
+          </div>
+          <div class="completed-group">
+            <h3>Ausentes del portafolio vigente de Loop</h3>
+            <div id="completed-project-list" class="completed-project-list"></div>
+          </div>
+        </details>
+      </section>
+
+      <footer>
+        <p>Dashboard operativo · Fuentes: Microsoft Loop + Azure DevOps OrbitalPM</p>
+        <p>Loop define vigencia · Azure DevOps aporta tareas y sprints</p>
+      </footer>
+    </main>
+  </div>
+
+  <dialog id="task-dialog">
+    <div class="dialog-header">
+      <div>
+        <p id="dialog-engineer" class="eyebrow"></p>
+        <h2 id="dialog-title"></h2>
+      </div>
+      <button id="dialog-close" class="icon-button" type="button" aria-label="Cerrar">×</button>
+    </div>
+    <div id="dialog-content" class="dialog-content"></div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

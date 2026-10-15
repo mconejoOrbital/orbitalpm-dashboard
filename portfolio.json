@@ -1,0 +1,281 @@
+{
+  "source": {
+    "name": "Orbital Engineering Project Portfolio",
+    "capturedAt": "2026-10-15T17:03:00-06:00",
+    "authority": "Projects present in this portfolio are current; Azure DevOps projects absent here are completed."
+  },
+  "projects": [
+    {
+      "client": "B&B",
+      "scope": "Entra ID y servicios derivados E5",
+      "status": "In progress",
+      "progress": 95,
+      "engineers": ["Fernando Galdamez"],
+      "adoProjects": ["BB Implementacion E5"]
+    },
+    {
+      "client": "Seguros Futuro",
+      "scope": "Implementación Entra-M365-Intune-Defender",
+      "status": "In progress",
+      "progress": 91,
+      "engineers": ["Marcela Ramirez"],
+      "adoProjects": ["Seguros Futuro - Entra-M365-Intune-Defender"]
+    },
+    {
+      "client": "SERSAPROSA",
+      "scope": "Migración hacia Exchange Online",
+      "status": "In progress",
+      "progress": 98,
+      "engineers": ["Marcela Ramirez"],
+      "adoProjects": ["SERSAPROSA - Migración de Buzones Exchange 2016 a Exchange 365"]
+    },
+    {
+      "client": "Sherwin Williams",
+      "scope": "Zimbra a M365, Seguridad e Intune",
+      "status": "In progress",
+      "progress": 73,
+      "engineers": ["Marcela Ramirez"],
+      "adoProjects": ["Sherwin Williams - Implementación M365 EntraID Intune DLP"]
+    },
+    {
+      "client": "SIMAN",
+      "scope": "Implementación Azure VDI",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": ["SIMAN - Implementación POC Azure VDI"]
+    },
+    {
+      "client": "INTROSA",
+      "scope": "Análisis de Incidente",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Fernando Galdamez"],
+      "adoProjects": []
+    },
+    {
+      "client": "GALVANISA",
+      "scope": "SAP on Azure",
+      "status": "In progress",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": ["Galvanissa-SAP-Azure"]
+    },
+    {
+      "client": "FUSAL",
+      "scope": "Infraestructura en Azure",
+      "status": "In progress",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": ["FUSAL - Migración SAP hacia Azure"]
+    },
+    {
+      "client": "Grupo Hame",
+      "scope": "Windows Hello for Business",
+      "status": "In progress",
+      "progress": 0,
+      "engineers": ["Carla España"],
+      "adoProjects": ["Implementación WHfB Grupo Hame"]
+    },
+    {
+      "client": "Quadriga",
+      "scope": "Migración Google a M365",
+      "status": "On Hold",
+      "progress": 98,
+      "engineers": ["Marcela Ramirez", "Manuel Martinez"],
+      "adoProjects": ["Quadriga Migración Google Workspace a M365"]
+    },
+    {
+      "client": "ADMOSA",
+      "scope": "Assessment de Dominio",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Manuel Martinez"],
+      "adoProjects": []
+    },
+    {
+      "client": "ARIAS LAW",
+      "scope": "Microsoft Purview, Intune y Defender for Endpoint P2",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila", "Oscar Lainez", "Guillermo Portillo"],
+      "adoProjects": ["Arias Law - Microsoft Purview Intune y Defender"]
+    },
+    {
+      "client": "VIJOSA",
+      "scope": "Implementación de SharePoint y Teams Rooms",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": []
+    },
+    {
+      "client": "VASPORT",
+      "scope": "Remediación de Incorporaciones Intune",
+      "status": "In progress",
+      "progress": 25,
+      "engineers": ["Manuel Martinez"],
+      "adoProjects": ["VASPORT - Tecnologias Microsoft Contrato Soporte 2026"]
+    },
+    {
+      "client": "VASPORT",
+      "scope": "Incorporación de Dispositivos Móviles",
+      "status": "In progress",
+      "progress": 86,
+      "engineers": ["Oscar Lainez"],
+      "adoProjects": []
+    },
+    {
+      "client": "Pentágono",
+      "scope": "Análisis de Incidente",
+      "status": "In progress",
+      "progress": 72,
+      "engineers": ["Fernando Galdamez", "Guillermo Portillo"],
+      "adoProjects": ["PENTAGONO - Evaluación de Seguridad del Entorno Microsoft 365"]
+    },
+    {
+      "client": "PREINSING",
+      "scope": "Nuevo tenant Microsoft 365",
+      "status": "Starting",
+      "progress": 0,
+      "engineers": ["Marcela Ramirez"],
+      "adoProjects": []
+    },
+    {
+      "client": "Super Repuestos",
+      "scope": "Azure Front Door Premium",
+      "status": "In progress",
+      "progress": 76,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": ["Super Repuestos - Azure Front Door Premium"]
+    },
+    {
+      "client": "Super Repuestos",
+      "scope": "Implementación de Sentinel",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila", "Guillermo Portillo"],
+      "adoProjects": ["SuperRepuestos - Implementacion de Sentinel"]
+    },
+    {
+      "client": "TOTAL FINCO",
+      "scope": "VPN y POC Azure Virtual Desktop",
+      "status": "Initial Planning",
+      "progress": 0,
+      "engineers": [],
+      "adoProjects": ["TOTAL FINCO - POC Azure Virtual Desktop"]
+    },
+    {
+      "client": "VIDRI",
+      "scope": "Intune y Purview",
+      "status": "Initial Planning",
+      "progress": 0,
+      "engineers": ["Marcela Ramirez"],
+      "adoProjects": ["VIDRI - Despliegue de Microsoft Intune"]
+    },
+    {
+      "client": "ALPHA",
+      "scope": "Azure Virtual Desktop",
+      "status": "In progress",
+      "progress": 0,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": []
+    },
+    {
+      "client": "INQUISALVA",
+      "scope": "WHFB y Seguridad",
+      "status": "In progress",
+      "progress": 97,
+      "engineers": ["Carla España", "Fernando Galdamez"],
+      "adoProjects": ["INQUISALVA - WHFB y Seguridad"]
+    },
+    {
+      "client": "Sherwin Williams",
+      "scope": "Actualización de AD",
+      "status": "Initial Planning",
+      "progress": 7,
+      "engineers": ["Manuel Galdamez"],
+      "adoProjects": ["Sherwin Williams - Actualización de AD"]
+    },
+    {
+      "client": "Autofácil",
+      "scope": "Implementación WHFB y LAPS",
+      "status": "In progress",
+      "progress": 90,
+      "engineers": ["Carla España", "Fernando Galdamez"],
+      "adoProjects": ["Autofacil - Passworless WHFB"]
+    },
+    {
+      "client": "TERNOVA",
+      "scope": "Zero Trust 2025",
+      "status": "In progress",
+      "progress": 70,
+      "engineers": ["Fernando Galdamez", "Carla España", "Mauricio Dávila"],
+      "adoProjects": ["TERNOVA - Zero Trust 2025"]
+    },
+    {
+      "client": "AMP",
+      "scope": "Purview and IA",
+      "status": "In progress",
+      "progress": 90,
+      "engineers": ["Fernando Galdamez"],
+      "adoProjects": ["AMP -  Purview and IA"]
+    },
+    {
+      "client": "AMP",
+      "scope": "Azure Update Manager",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Oscar Lainez"],
+      "adoProjects": []
+    },
+    {
+      "client": "AFP CONFIA",
+      "scope": "Purview e IA",
+      "status": "In progress",
+      "progress": 90,
+      "engineers": ["Guillermo Portillo"],
+      "adoProjects": ["AFP CONFIA - Seguridad para IA Generativa"]
+    },
+    {
+      "client": "FEDECREDITO",
+      "scope": "WHFB",
+      "status": "On Hold",
+      "progress": 79,
+      "engineers": ["Carla España"],
+      "adoProjects": []
+    },
+    {
+      "client": "MAPA",
+      "scope": "VM Linux",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": []
+    },
+    {
+      "client": "MAPA",
+      "scope": "2da VM Linux",
+      "status": "Closing",
+      "progress": 100,
+      "engineers": ["Mauricio Dávila"],
+      "adoProjects": []
+    },
+    {
+      "client": "ELCATEX",
+      "scope": "Implementación de 2 DNS",
+      "status": "Initial Planning",
+      "progress": 0,
+      "engineers": ["Guillermo Portillo"],
+      "adoProjects": ["ELCATEX - Estabilizacion Migracion y Alta Disponibilidad de AD"]
+    },
+    {
+      "client": "ELCATEX",
+      "scope": "WHFB LAPS",
+      "status": "On Hold",
+      "progress": 92,
+      "engineers": ["Guillermo Portillo"],
+      "adoProjects": ["ELCATEX - WHFB LAPS"]
+    }
+  ]
+}
